@@ -1,0 +1,6 @@
+perfomance:
+-trying out if jdbc discovery works better
+
+bugs:
+-debug why nodes lose connection (socket_break err)
+-forward the number of nodes from start script to jar inside container

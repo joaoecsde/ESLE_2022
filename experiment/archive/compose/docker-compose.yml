@@ -1,0 +1,47 @@
+version: "3"
+services:
+  ignite_service:
+    build: .
+    image: "agiteam24/esle-group4:my_ignite"
+    networks:
+      - my-network
+    ports:
+      - "10800:10800"
+      - "47100:47100"
+    hostname: node-{{ .Task.Slot }}
+    deploy:
+      replicas: 2
+
+#  postgres:
+#    image: postgres:14.1-alpine
+#    restart: always
+#    networks:
+#      - my-network
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+#      - POSTGRES_DB=postgres
+#    ports:
+#      - '5432:5432'
+#    volumes:
+#      - db:/var/lib/postgresql/data
+
+  ignite-manager:
+    build: .
+    image: "agiteam24/esle-group4:my_ignite"
+    networks:
+      - my-network
+    ports:
+      - "10800:10800"
+      - "47100:47100"
+    hostname: ignite-manager
+    deploy:
+      replicas: 1
+
+networks:
+  my-network:
+    driver: overlay
+
+#volumes:
+#  db:
+#    driver: local

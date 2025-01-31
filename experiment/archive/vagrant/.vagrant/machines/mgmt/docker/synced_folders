@@ -1,0 +1,1 @@
+{"docker":{"/home/vagrant/ignite":{"docker_consistency":"cached","guestpath":"/home/vagrant/ignite","hostpath":"/Users/lukas/Desktop/ESLE_2022_Group-4/experiment/vagrant/ignite","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/lukas/Desktop/ESLE_2022_Group-4/experiment/vagrant","disabled":false,"__vagrantfile":true}}}
